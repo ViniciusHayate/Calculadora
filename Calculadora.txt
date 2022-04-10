@@ -1,0 +1,403 @@
+# Calculadora
+Projeto de uma Calculadora
+-----------------------------------------------------------------
+package calc_teste;
+
+import java.awt.Color;
+import java.awt.Window;
+
+public class UI_Calc extends javax.swing.JFrame {
+
+    public UI_Calc() {
+        initComponents();
+        getContentPane().setBackground(Color.white);
+    }
+
+    Double valor1, valor2, resultado;
+    String sinal;
+
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    private void initComponents() {
+
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        BOTAO_7_ = new javax.swing.JButton();
+        BOTAO_8_ = new javax.swing.JButton();
+        BOTAO_9_ = new javax.swing.JButton();
+        txtResultado = new javax.swing.JTextField();
+        BOTAO_RESULTADO_ = new javax.swing.JButton();
+        BOTAO_0_ = new javax.swing.JButton();
+        BOTAO_ADIÇÃO = new javax.swing.JButton();
+        BOTAO_1_ = new javax.swing.JButton();
+        BOTAO_SUBTRAIR_ = new javax.swing.JButton();
+        BOTAO_2_ = new javax.swing.JButton();
+        BOTAO_DIVISAO = new javax.swing.JButton();
+        BOTAO_3_ = new javax.swing.JButton();
+        BOTAO_MULTIPLICAR_ = new javax.swing.JButton();
+        BOTAO_4_ = new javax.swing.JButton();
+        BOTAO_APAGAR_ = new javax.swing.JButton();
+        BOTAO_5_ = new javax.swing.JButton();
+        BOTAO_6_ = new javax.swing.JButton();
+
+        jButton1.setText("jButton1");
+
+        jButton2.setText("jButton2");
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
+
+        BOTAO_7_.setBackground(new java.awt.Color(255, 102, 102));
+        BOTAO_7_.setText("7");
+        BOTAO_7_.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BOTAO_7_ActionPerformed(evt);
+            }
+        });
+
+        BOTAO_8_.setBackground(new java.awt.Color(255, 102, 102));
+        BOTAO_8_.setText("8");
+        BOTAO_8_.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BOTAO_8_ActionPerformed(evt);
+            }
+        });
+
+        BOTAO_9_.setBackground(new java.awt.Color(255, 102, 102));
+        BOTAO_9_.setText("9");
+
+        txtResultado.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        BOTAO_RESULTADO_.setBackground(new java.awt.Color(0, 0, 204));
+        BOTAO_RESULTADO_.setText("=");
+        BOTAO_RESULTADO_.addActionListener(new java.awt.event.ActionListener() { 
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BOTAO_RESULTADO_ActionPerformed(evt);
+            }
+        });
+
+        BOTAO_0_.setBackground(new java.awt.Color(255, 102, 102));
+        BOTAO_0_.setText("0");
+        BOTAO_0_.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BOTAO_0_ActionPerformed(evt);
+            }
+        });
+
+        BOTAO_ADIÇÃO.setBackground(new java.awt.Color(153, 255, 0));
+        BOTAO_ADIÇÃO.setForeground(new java.awt.Color(0, 0, 0));
+        BOTAO_ADIÇÃO.setText("+");
+        BOTAO_ADIÇÃO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BOTAO_ADIÇÃOActionPerformed(evt);
+           
+        });
+
+        BOTAO_1_.setBackground(new java.awt.Color(255, 102, 102));
+        BOTAO_1_.setText("1");
+        BOTAO_1_.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BOTAO_1_ActionPerformed(evt);
+            }
+        });
+
+        BOTAO_SUBTRAIR_.setBackground(new java.awt.Color(153, 255, 0));
+        BOTAO_SUBTRAIR_.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        BOTAO_SUBTRAIR_.setForeground(new java.awt.Color(0, 0, 0));
+        BOTAO_SUBTRAIR_.setText("-");
+        BOTAO_SUBTRAIR_.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BOTAO_SUBTRAIR_ActionPerformed(evt);
+            }
+        });
+
+        BOTAO_2_.setBackground(new java.awt.Color(255, 102, 102));
+        BOTAO_2_.setText("2");
+        BOTAO_2_.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BOTAO_2_ActionPerformed(evt);
+            }
+        });
+
+        BOTAO_DIVISAO.setBackground(new java.awt.Color(102, 255, 0));
+        BOTAO_DIVISAO.setForeground(new java.awt.Color(0, 0, 0));
+        BOTAO_DIVISAO.setText("/");
+        BOTAO_DIVISAO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BOTAO_DIVISAOActionPerformed(evt);
+            }
+        });
+
+        BOTAO_3_.setBackground(new java.awt.Color(255, 102, 102));
+        BOTAO_3_.setText("3");
+        BOTAO_3_.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BOTAO_3_ActionPerformed(evt);
+            }
+        });
+
+        BOTAO_MULTIPLICAR_.setBackground(new java.awt.Color(102, 255, 0));
+        BOTAO_MULTIPLICAR_.setForeground(new java.awt.Color(0, 0, 0));
+        BOTAO_MULTIPLICAR_.setText("x");
+        BOTAO_MULTIPLICAR_.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BOTAO_MULTIPLICAR_ActionPerformed(evt);
+            }
+        });
+
+        BOTAO_4_.setBackground(new java.awt.Color(255, 102, 102));
+        BOTAO_4_.setText("4");
+
+        BOTAO_APAGAR_.setBackground(new java.awt.Color(255, 0, 0));
+        BOTAO_APAGAR_.setText("CE");
+        BOTAO_APAGAR_.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BOTAO_APAGAR_ActionPerformed(evt);
+            }
+        });
+
+        BOTAO_5_.setBackground(new java.awt.Color(255, 102, 102));
+        BOTAO_5_.setText("5");
+
+        BOTAO_6_.setBackground(new java.awt.Color(255, 102, 102));
+        BOTAO_6_.setText("6");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(txtResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(BOTAO_APAGAR_, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(BOTAO_MULTIPLICAR_, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(BOTAO_DIVISAO, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addComponent(BOTAO_7_, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(BOTAO_8_, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(BOTAO_9_, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addComponent(BOTAO_4_, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(BOTAO_5_, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(BOTAO_6_, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(BOTAO_ADIÇÃO, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(BOTAO_SUBTRAIR_, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                    .addComponent(BOTAO_1_, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addComponent(BOTAO_2_, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(BOTAO_3_, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(BOTAO_0_, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(BOTAO_RESULTADO_, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(25, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(txtResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BOTAO_MULTIPLICAR_, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BOTAO_APAGAR_, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BOTAO_DIVISAO, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(BOTAO_SUBTRAIR_, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(BOTAO_7_, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(BOTAO_8_, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(BOTAO_9_, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BOTAO_4_, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BOTAO_5_, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BOTAO_6_, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BOTAO_ADIÇÃO, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(BOTAO_1_, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BOTAO_2_, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BOTAO_3_, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(BOTAO_0_, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(BOTAO_RESULTADO_, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        pack();
+    }// </editor-fold>                        
+
+    private void BOTAO_8_ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        txtResultado.setText(txtResultado.getText() + "8");
+    }                                        
+
+    private void BOTAO_7_ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        txtResultado.setText(txtResultado.getText() + "7");
+    }                                        
+
+    private void BOTAO_3_ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        txtResultado.setText(txtResultado.getText() + "3");
+    }                                        
+
+    private void BOTAO_2_ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        txtResultado.setText(txtResultado.getText() + "2");
+    }                                        
+
+    private void BOTAO_1_ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        txtResultado.setText(txtResultado.getText() + "1");
+    }                                        
+
+    private void BOTAO_0_ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        txtResultado.setText(txtResultado.getText() + "0");
+    }                                        
+
+    private void BOTAO_RESULTADO_ActionPerformed(java.awt.event.ActionEvent evt) {                                                 
+
+        valor2 = Double.parseDouble(txtResultado.getText());
+        txtResultado.setText("");
+
+        switch (sinal) {
+            case "somar":
+            resultado = valor1 + valor2;
+            txtResultado.setText(String.valueOf(resultado));
+            break;
+
+            case "sub":
+            resultado = valor1 - valor2;
+            txtResultado.setText(String.valueOf(resultado));
+            break;
+            case "multiplicar":
+            resultado = valor1 * valor2;
+            txtResultado.setText(String.valueOf(resultado));
+            break;
+            case "dividir":
+            resultado = valor1 / valor2;
+            txtResultado.setText(String.valueOf(resultado));
+        }
+    }                                                
+
+    private void BOTAO_DIVISAOActionPerformed(java.awt.event.ActionEvent evt) {                                              
+        valor1 = Double.parseDouble(txtResultado.getText());
+        txtResultado.setText("");
+        sinal = "divisao";
+    }                                             
+
+    private void BOTAO_SUBTRAIR_ActionPerformed(java.awt.event.ActionEvent evt) {                                                
+        valor1 = Double.parseDouble(txtResultado.getText());
+        txtResultado.setText("");
+        sinal = "sub";
+    }                                               
+
+    private void BOTAO_ADIÇÃOActionPerformed(java.awt.event.ActionEvent evt) {                                             
+        // TODO add your handling code here:
+        valor1 = Double.parseDouble(txtResultado.getText());
+        txtResultado.setText("");
+        sinal = "somar";
+    }                                            
+
+    private void BOTAO_MULTIPLICAR_ActionPerformed(java.awt.event.ActionEvent evt) {                                                   
+        valor1 = Double.parseDouble(txtResultado.getText());
+        txtResultado.setText("");
+        sinal = "multiplicar";
+    }                                                  
+
+    private void BOTAO_APAGAR_ActionPerformed(java.awt.event.ActionEvent evt) {                                              
+        txtResultado.setText("");
+        valor1 = null;
+        valor2 = null;
+    }                                             
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(UI_Calc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(UI_Calc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(UI_Calc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(UI_Calc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new UI_Calc().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify                     
+    private javax.swing.JButton BOTAO_0_;
+    private javax.swing.JButton BOTAO_1_;
+    private javax.swing.JButton BOTAO_2_;
+    private javax.swing.JButton BOTAO_3_;
+    private javax.swing.JButton BOTAO_4_;
+    private javax.swing.JButton BOTAO_5_;
+    private javax.swing.JButton BOTAO_6_;
+    private javax.swing.JButton BOTAO_7_;
+    private javax.swing.JButton BOTAO_8_;
+    private javax.swing.JButton BOTAO_9_;
+    private javax.swing.JButton BOTAO_ADIÇÃO;
+    private javax.swing.JButton BOTAO_APAGAR_;
+    private javax.swing.JButton BOTAO_DIVISAO;
+    private javax.swing.JButton BOTAO_MULTIPLICAR_;
+    private javax.swing.JButton BOTAO_RESULTADO_;
+    private javax.swing.JButton BOTAO_SUBTRAIR_;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField txtResultado;
+    // End of variables declaration                   
+}
